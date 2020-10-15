@@ -10,6 +10,11 @@ let timmer = null;
 Component({
     externalClasses: ['i-class'],
 
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     data: {
         ...default_data
     },

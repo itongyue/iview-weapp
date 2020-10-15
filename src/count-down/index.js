@@ -7,6 +7,12 @@ Component({
         clearTimer: Boolean
     },
     externalClasses: ['countdown-class'],
+
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     data: {
         time: '',
         resultFormat: [],

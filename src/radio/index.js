@@ -2,6 +2,12 @@ const prefixCls = 'i-radio';
 
 Component({
     externalClasses: ['i-class'],
+
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     relations: {
         '../radio-group/index': {
             type: 'parent'

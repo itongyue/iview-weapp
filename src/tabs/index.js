@@ -1,6 +1,11 @@
 Component({
     externalClasses: ['i-class'],
 
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     relations: {
         '../tab/index': {
             type: 'child',

@@ -1,5 +1,11 @@
 Component({
     externalClasses: ['i-class'],
+
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     relations: {
         '../checkbox/index': {
             type: 'child',

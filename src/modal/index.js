@@ -1,6 +1,11 @@
 Component({
     externalClasses: ['i-class', 'i-class-mask'],
 
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     properties: {
         visible: {
             type: Boolean,

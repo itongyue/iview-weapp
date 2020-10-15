@@ -1,8 +1,11 @@
 Component({
     externalClasses: ['i-class'],
+
     options: {
-        multipleSlots: true
+        multipleSlots: true,
+        addGlobalClass: true
     },
+
     relations : {
         '../sticky/index' : {
             type : 'parent'

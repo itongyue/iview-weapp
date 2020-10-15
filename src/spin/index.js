@@ -1,6 +1,11 @@
 Component({
     externalClasses: ['i-class'],
 
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     properties: {
         // small || default || large
         size: {

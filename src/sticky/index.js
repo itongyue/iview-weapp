@@ -1,5 +1,11 @@
 Component({
     externalClasses: ['i-class'],
+
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     properties : {
         scrollTop : {
             type : Number,
@@ -59,5 +65,5 @@ Component({
             }
         }
     }
-        
+
 })

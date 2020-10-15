@@ -1,5 +1,11 @@
 Component({
     externalClasses: ['i-class'],
+
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     properties : {
         height : {
             type : String,
@@ -52,7 +58,7 @@ Component({
                         timer : null
                     })
                 }
-                
+
                 this.data.timer = setTimeout(()=>{
                     const data = [];
                     indexItems.forEach((item) => {
@@ -71,7 +77,7 @@ Component({
                 this.setData({
                     timer : this.data.timer
                 })
-                
+
             }
         },
         handlerScroll(event){

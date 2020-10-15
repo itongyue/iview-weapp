@@ -2,7 +2,8 @@ Component({
     externalClasses: ['i-class', 'i-class-mask', 'i-class-header'],
 
     options: {
-        multipleSlots: true
+        multipleSlots: true,
+        addGlobalClass: true
     },
 
     properties: {

@@ -3,6 +3,11 @@ Component({
 
     externalClasses: ['i-class'],
 
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     properties: {
         title: {
             type: String

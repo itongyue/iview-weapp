@@ -9,6 +9,7 @@ function swipeDirection(x1, x2, y1, y2) {
 
 Component({
     externalClasses: ['i-class'],
+
     properties: {
         actions: {
             value: [],
@@ -31,7 +32,8 @@ Component({
     },
     options: {
         // 在组件定义时的选项中启用多slot支持
-        multipleSlots: true
+        multipleSlots: true,
+        addGlobalClass: true
     },
     data : {
         //touch start position
@@ -76,7 +78,7 @@ Component({
                 // }).exec()
             }else{
                 this.data.limitMove = this.data.operateWidth;
-                
+
             }
         },
         handlerTouchstart(event){
@@ -99,7 +101,7 @@ Component({
             }
             if( data.limitMove <  Math.abs( spacing.pageX ) ){
                 spacing.pageX = -data.limitMove;
-                
+
             }
             this.setData({
                 'position' : spacing

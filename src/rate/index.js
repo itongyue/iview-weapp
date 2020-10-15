@@ -1,5 +1,11 @@
 Component({
     externalClasses: ['i-class'],
+
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     properties : {
         count : {
             type : Number,
@@ -55,7 +61,7 @@ Component({
             let setIndex = Math.ceil( space/data.size );
             setIndex = setIndex  > data.count ? data.count : setIndex ;
             this.triggerEvent('change',{
-                index : setIndex 
+                index : setIndex
             })
         }
     },

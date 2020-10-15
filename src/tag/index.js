@@ -1,5 +1,11 @@
 Component({
     externalClasses: ['i-class'],
+
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     properties : {
         //slot name
         name : {
@@ -25,7 +31,7 @@ Component({
         type : {
             type : String,
             value : 'dot'
-        } 
+        }
     },
     methods : {
         tapTag(){

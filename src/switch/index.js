@@ -1,5 +1,6 @@
 Component({
     externalClasses: ['i-class'],
+
     properties : {
         value : {
             type : Boolean,
@@ -23,7 +24,8 @@ Component({
     },
     options: {
         // 在组件定义时的选项中启用多slot支持
-        multipleSlots: true
+        multipleSlots: true,
+        addGlobalClass: true
     },
     methods : {
         toggle(){

@@ -1,6 +1,11 @@
 Component({
     externalClasses: ['i-class'],
 
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     properties: {
         // default, primary, ghost, info, success, warning, error
         type: {

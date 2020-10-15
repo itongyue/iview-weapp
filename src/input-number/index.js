@@ -19,6 +19,11 @@ function addNum (num1, num2) {
 Component({
     externalClasses: ['i-class'],
 
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     properties: {
         // small || default || large
         size: String,
@@ -39,7 +44,7 @@ Component({
             value: 1
         }
     },
-    
+
 
     methods: {
         handleChangeStep(e, type) {

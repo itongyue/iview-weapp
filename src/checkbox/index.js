@@ -2,6 +2,12 @@ const prefixCls = 'i-checkbox';
 
 Component({
     externalClasses: ['i-class'],
+
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     relations: {
         '../checkbox-group/index': {
             type: 'parent'

@@ -1,5 +1,11 @@
 Component({
     externalClasses: ['i-class'],
+
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     properties : {
         current : {
             type : Number,
@@ -13,9 +19,9 @@ Component({
         },
         direction : {
             type : String,
-            //value has horizontal or vertical 
+            //value has horizontal or vertical
             value : 'horizontal'
-        } 
+        }
     },
     relations : {
         '../step/index' : {

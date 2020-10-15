@@ -1,6 +1,11 @@
 Component({
     externalClasses: ['i-class', 'i-class-alone'],
 
+    options: {
+        multipleSlots: true,
+        addGlobalClass: true
+    },
+
     properties: {
         count: {
             type: Number,

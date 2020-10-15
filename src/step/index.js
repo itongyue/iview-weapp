@@ -1,5 +1,6 @@
 Component({
     externalClasses: ['i-class'],
+
     properties : {
         status : {
             type : String,
@@ -21,7 +22,8 @@ Component({
     },
     options: {
         // 在组件定义时的选项中启用多slot支持
-        multipleSlots: true
+        multipleSlots: true,
+        addGlobalClass: true
     },
     relations : {
         '../steps/index' : {
