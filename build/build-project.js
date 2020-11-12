@@ -8,7 +8,7 @@ if ('build/build-project.js' === process.env.PROJECT || process.env.PROJECT.subs
     throw new Error('请指定projectName. e.g.: npm run porject -- --projectName');
 }
 process.env.PROJECT = process.env.PROJECT.substr(2)
-const projectDestDir = getProjectPath(`../${process.env.PROJECT}/static/iview`)
+const projectDestDir = getProjectPath(`../../${process.env.PROJECT}/static/iview`)
 
 gulp.task('compile-css', gulp.series(function(done) {
     return gulp.src(['../src/**/*.less', '!../src/**/_*.less'])
