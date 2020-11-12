@@ -3,7 +3,12 @@ const gulp = require('gulp');
 const less = require('gulp-less');
 const cssmin = require('gulp-clean-css');
 const rename = require('gulp-rename');
-const projectDestDir = getProjectPath('../static/iview')
+process.env.PROJECT = process.argv[process.argv.length - 1]
+if ('build/build-project.js' === process.env.PROJECT || process.env.PROJECT.substr(0,2) !== '--') {
+    throw new Error('请指定projectName. e.g.: npm run porject -- --projectName');
+}
+process.env.PROJECT = process.env.PROJECT.substr(2)
+const projectDestDir = getProjectPath(`../${process.env.PROJECT}/static/iview`)
 
 gulp.task('compile-css', gulp.series(function(done) {
     return gulp.src(['../src/**/*.less', '!../src/**/_*.less'])
@@ -37,4 +42,6 @@ gulp.task('auto', gulp.series(function(done) {
     gulp.watch('../src/**/*.wxml', gulp.series('compile-wxml'));
 }));
 
-gulp.task('default', gulp.series(['compile-css', 'compile-js', 'compile-json', 'compile-wxml', 'auto']));
+gulp.task('dev', gulp.series(['compile-css', 'compile-js', 'compile-json', 'compile-wxml', 'auto']));
+
+gulp.task('default', gulp.series(['compile-css', 'compile-js', 'compile-json', 'compile-wxml']));
