@@ -17,6 +17,10 @@ Component({
             type: String,
             value: 'text'
         },
+        required: {
+            type: Boolean,
+            value: false
+        },
         disabled: {
             type: Boolean,
             value: false
@@ -42,7 +46,8 @@ Component({
             value: false
         },
         maxlength: {
-            type: Number
+            type: Number,
+            value: 50
         }
     },
 
