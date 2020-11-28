@@ -1,3 +1,10 @@
 <i-cell-group class="i-class">
-    <slot></slot>
+    <i-cell wx:if="{{ title != '' }}" title="{{ title }}" required=" {{ required }} " right=" {{ right }} ">
+        <view slot="footer" class="i-radio-group">
+            <slot></slot>
+        </view>
+    </i-cell>
+    <view wx:else class="i-radio-group">
+        <slot></slot>
+    </view>
 </i-cell-group>

@@ -1,8 +1,8 @@
-<view class="i-class i-cell i-input {{ error ? 'i-input-error' : '' }} {{ mode === 'wrapped' ? 'i-input-wrapped' : '' }}">
-    <view wx:if="{{ title }}" class="i-cell-hd i-input-title">
+<view class="i-class i-cell i-input {{ type === 'textarea' ? 'i-input-textarea' : '' }} {{ error ? 'i-input-error' : '' }} {{ mode === 'wrapped' ? 'i-input-wrapped' : '' }}">
+    <view wx:if="{{ title }}" class="i-cell-hd i-input-title {{ right ? 'right' : '' }}">
         <view
             wx:if="{{ required }}"
-            class="required {{ right ? 'right' : '' }}"
+            class="required"
         >*</view>
         {{ title }}
     </view>
@@ -14,7 +14,7 @@
         value="{{ value }}"
         placeholder="{{ placeholder }}"
         maxlength="{{ maxlength }}"
-        class="i-input-input i-cell-bd {{ right ? 'i-input-input-right' : '' }}"
+        class="i-input-input-textarea i-cell-bd {{ right ? 'i-input-input-right' : '' }}"
         placeholder-class="i-input-placeholder"
         bindinput="handleInputChange"
         bindfocus="handleInputFocus"

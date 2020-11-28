@@ -2,21 +2,29 @@
 @import "../styles/_mixins.less";
 
 .i-radio {
-    &-cell {
-        &::after {
-            display: block;
-        }
+    position: relative;
+    padding: 12px 15px;
+    line-height: 1.4;
+    &::after {
+        .hairline();
+        border-bottom-width: 1px;
+        left: 15px;
+        right: 0;
+    }
+    &-last::after {
+        display: none;
+    }
+    &-radio {
+        display: flex;
     }
     &-radio-left {
-        float: left;
+        flex-direction: row;
     }
     &-radio-right {
-        float: right;
+        justify-content: space-between;
+        flex-direction: row-reverse;
     }
-    &-radio{
-        vertical-align: middle;
-    }
-    &-title{
+    &-title {
         display: inline-block;
         vertical-align: middle;
     }

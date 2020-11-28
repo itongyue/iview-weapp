@@ -26,11 +26,24 @@ Component({
         label: {
             type: String
         },
+        required: {
+            type: Boolean,
+            value: false
+        },
+        // required 显示方式
+        right: {
+            type: Boolean,
+            value: false
+        },
         // 右侧内容
         value: {
             type: String
         },
-        // 只有点击 footer 区域才触发 tab 事件
+        catchTap: {
+            type: Boolean,
+            value: true
+        },
+        // 只有点击 footer 区域才触发 tap 事件
         onlyTapFooter: {
             type: Boolean
         },

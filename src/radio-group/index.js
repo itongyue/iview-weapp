@@ -26,6 +26,18 @@ Component({
             value: '',
             observer: 'changeCurrent'
         },
+        title: {
+            type: String
+        },
+        required: {
+            type: Boolean,
+            value: false
+        },
+        // required 显示方式
+        right: {
+            type: Boolean,
+            value: false
+        }
     },
     methods: {
         changeCurrent(val = this.data.current) {

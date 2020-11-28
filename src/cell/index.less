@@ -35,6 +35,14 @@
     &-text{
         line-height: 24px;
         font-size: @size-font-base;
+        display: flex;
+        &.right {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+        .required {
+            color: red;
+        }
     }
 
     &-desc{
