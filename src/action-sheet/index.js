@@ -38,10 +38,13 @@ Component({
         handleClickItem ({ currentTarget = {} }) {
             const dataset = currentTarget.dataset || {};
             const { index } = dataset;
+            this.triggerEvent('change', { index });
             this.triggerEvent('click', { index });
         },
 
         handleClickCancel () {
+            const index = -1;
+            this.triggerEvent('change', { index });
             this.triggerEvent('cancel');
         }
     }
